@@ -1,0 +1,92 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img{
+    height:100px;
+    width:100px;
+    border-radius: 200px;
+    box-shadow: 5px 3px 5px black;
+}
+#holder{
+    display: flex;
+    flex-direction: column;
+}
+#container{
+background-color:rgba(255, 255, 255, 0.09);
+width:300px;
+height: 350px;
+color:antiquewhite;
+}
+body{
+    position:absolute;
+    transform:translate(-50%,-50%);
+    top:50%;
+    left:50%;
+    background: url("images/wood.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#head,#tail{
+    position: absolute;
+    left:100px;
+    top:120px;
+}
+p{
+    position: relative;
+    left:220px;
+    margin:5px;
+}
+button{
+    position: relative;
+    top:230px;
+    left:60px;
+    margin:20px;
+    padding: 3px 7px;
+    border-radius: 15px;
+}
+#flip{
+    background-color:lightsalmon;
+    color:white;
+    border:inset;
+    border-color:rgb(141, 134, 126);
+}
+#reset{
+    background-color:rgb(141, 134, 126);
+    color:black;
+    border:outset;
+    border-color:hsl(53, 78%, 21%);
+}
+#flip:active{
+    background-color:hsl(53, 78%, 31%);
+}
+#reset:active{
+    background-color:lightsalmon;
+}
+@keyframes heads-flip{
+    0% {
+        transform:rotateX(0deg);
+    }
+    100%{
+        transform:rotateX(2190deg);
+    }
+}
+@keyframes tails-flip{
+    0% {
+        transform:rotateX(0deg);
+    }
+    100%{
+        transform:rotateX(2190deg);
+    }
+}
+
+@media(max-width:410px){
+    #container{
+position: relative;
+left:10px;
+top:20px;
+        }
+}
